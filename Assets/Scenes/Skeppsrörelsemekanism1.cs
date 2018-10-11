@@ -18,6 +18,7 @@ public class Skeppsrörelsemekanism1 : MonoBehaviour
 
     void Start()
     {
+        RandomSpeed = Speed + Random.Range(10, 51);
         Rend.color = Colour;
         Colour = new Color(0, 1, 0);
         // gör så att när man startar får man en tilldelad färg
@@ -55,7 +56,7 @@ public class Skeppsrörelsemekanism1 : MonoBehaviour
         }
 
 
-        RandomSpeed = Speed + Random.Range(10, 51);
+
         //Slumpvist ger spelaren en fart plus den fart (Speed) du blir tilldelad i början (25)
         transform.Translate(0, RandomSpeed * Time.deltaTime, 0);
         //bestämmer den konstanta farten av spelaren
